@@ -1,0 +1,417 @@
+/* =========================================
+   قرية أبوان
+   أرقام مهمة
+========================================= */
+
+.numbers-container {
+    width: 100%;
+}
+
+.numbers-section {
+    margin-bottom: 65px;
+}
+
+
+/* =========================================
+   عنوان القسم
+========================================= */
+
+.numbers-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.numbers-title-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    font-size: 24px;
+}
+
+
+/* =========================================
+   ألوان العناوين
+   نفس ألوان قسم الأطباء
+========================================= */
+
+.emergency-icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.services-icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+
+/* =========================================
+   عنوان النص
+========================================= */
+
+.numbers-title h2 {
+    margin: 0 0 4px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.numbers-title p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   شبكة الأرقام
+========================================= */
+
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 320px));
+    gap: 20px;
+    justify-content: start;
+}
+
+
+/* =========================================
+   الكارت
+========================================= */
+
+.number-card {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.number-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(18, 97, 160, 0.12);
+}
+
+
+/* =========================================
+   أيقونة الرقم
+========================================= */
+
+.number-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.number-card:hover .number-icon {
+    transform:
+        scale(1.07)
+        rotate(-3deg);
+
+    box-shadow:
+        0 10px 20px rgba(18, 97, 160, 0.10);
+}
+
+
+/* =========================================
+   ألوان الأيقونات
+   نفس لون قسم الأطباء بالضبط
+========================================= */
+
+.ambulance {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.police {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.fire {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.traffic {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.electricity {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.water {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.gas {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.health {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+
+/* =========================================
+   معلومات الرقم
+========================================= */
+
+.number-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.number-content h3 {
+    margin: 0 0 4px;
+
+    color: #0f172a;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.number-content span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   زر الاتصال
+   الأزرق الأساسي للموقع
+========================================= */
+
+.number-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    min-width: 72px;
+
+    padding: 9px 10px;
+
+    border-radius: 9px;
+
+    background: #1261a0;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.number-call:hover {
+    background: #0f4c81;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(18, 97, 160, 0.20);
+}
+
+.number-call strong {
+    font-size: 14px;
+}
+
+.number-call i {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .numbers-title h2 {
+    color: #f8fafc;
+}
+
+body.dark-mode .numbers-title p {
+    color: #94a8bb;
+}
+
+
+/* =========================================
+   الكروت في الوضع الداكن
+========================================= */
+
+body.dark-mode .number-card {
+    background: #0d1b2a;
+
+    border-color:
+        rgba(148, 163, 184, 0.12);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+body.dark-mode .number-card:hover {
+    box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.42);
+}
+
+
+/* =========================================
+   النص في الوضع الداكن
+========================================= */
+
+body.dark-mode .number-content h3 {
+    color: #f8fafc;
+}
+
+body.dark-mode .number-content span {
+    color: #94a8bb;
+}
+
+
+/* =========================================
+   الأيقونات في الوضع الداكن
+   نفس هوية الموقع
+========================================= */
+
+body.dark-mode .ambulance,
+body.dark-mode .police,
+body.dark-mode .fire,
+body.dark-mode .traffic,
+body.dark-mode .electricity,
+body.dark-mode .water,
+body.dark-mode .gas,
+body.dark-mode .health,
+body.dark-mode .emergency-icon,
+body.dark-mode .services-icon {
+
+    background:
+        rgba(14, 165, 233, 0.10);
+
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   زر الاتصال - Dark Mode
+========================================= */
+
+body.dark-mode .number-call {
+    background: #1261a0;
+}
+
+body.dark-mode .number-call:hover {
+    background: #0f4c81;
+}
+
+
+/* =========================================
+   الشاشات الصغيرة
+========================================= */
+
+@media (max-width: 900px) {
+
+    .numbers-grid {
+        grid-template-columns:
+            repeat(auto-fill, minmax(260px, 320px));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .numbers-section {
+        margin-bottom: 45px;
+    }
+
+    .numbers-title h2 {
+        font-size: 20px;
+    }
+
+    .numbers-title-icon {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        font-size: 21px;
+    }
+
+    .numbers-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .number-card {
+        padding: 15px;
+    }
+
+    .number-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 19px;
+    }
+
+    .number-content h3 {
+        font-size: 15px;
+    }
+
+    .number-content span {
+        font-size: 10px;
+    }
+
+    .number-call {
+        min-width: 65px;
+        padding: 8px;
+    }
+
+}

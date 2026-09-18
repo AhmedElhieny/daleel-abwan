@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>قرية أبوان | دليل الخدمات</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- Intro - دليل قرية أبوان -->
+    <!-- ========================= -->
+
+    <div id="siteIntro">
+
+        <div class="intro-content">
+
+            <img
+                src="./دليل إبوان.png"
+                alt="شعار دليل قرية أبوان"
+                class="intro-logo"
+            >
+
+            <h1>أهلاً بكم في</h1>
+
+            <h2>دليل قرية إبوان</h2>
+
+            <p>
+                دليلك للخدمات وأهل المهن في القرية
+            </p>
+
+            <div class="intro-loader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- Intro Script -->
+    <!-- ========================= -->
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            const intro = document.getElementById("siteIntro");
+
+            if (!intro) return;
+
+            // هل المستخدم شاف الانترو قبل كده؟
+            const introShown = localStorage.getItem("siteIntroShown");
+
+            if (introShown === "true") {
+
+                // إخفاء الانترو فورًا
+                intro.classList.add("hide-intro");
+
+            } else {
+
+                // أول دخول فقط
+                setTimeout(function () {
+
+                    intro.classList.add("hide-intro");
+
+                    // تسجيل إن الانترو اتعرض
+                    localStorage.setItem("siteIntroShown", "true");
+
+                }, 2500);
+
+            }
+
+        });
+
+    </script>
+
+
+    <!-- ========================= -->
+    <!-- Header -->
+    <!-- ========================= -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <div class="logo">
+
+                <img
+                    src="./دليل إبوان.png"
+                    alt="شعار قرية أبوان"
+                    class="site-logo"
+                >
+
+                <div>
+                    <h2>دليل إبوان</h2>
+                    <span>دليل الخدمات</span>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav id="mainNav">
+
+                <a href="#home" class="active">
+                    الرئيسية
+                </a>
+
+                <a href="#services">
+                    الخدمات
+                </a>
+
+                <a href="#about">
+                    عن الموقع
+                </a>
+
+            </nav>
+
+
+            <!-- Hamburger -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="فتح القائمة"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <!-- Dark Mode -->
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                type="button"
+                aria-label="تبديل الوضع"
+            >
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================= -->
+    <!-- Hero Section -->
+    <!-- ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <span class="welcome">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    أهلاً بك في أبوان
+
+                </span>
+
+
+                <h1>
+
+                    كل خدمات <span>قرية إبوان</span>
+
+                    في مكان واحد
+
+                </h1>
+
+
+                <p>
+
+                    ابحث بسهولة عن الأطباء والصيدليات والصنايعية
+                    والمحلات والخدمات المختلفة داخل القرية.
+
+                </p>
+
+
+                <!-- Search -->
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="بتدور على إيه؟ دكتور، صيدلية، كهربائي..."
+                    >
+
+                    <button
+                        id="searchBtn"
+                        type="button"
+                    >
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        بحث
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Services -->
+    <!-- ========================= -->
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+
+            <div class="section-title">
+
+                <span>
+                    دليل الخدمات
+                </span>
+
+                <h2>
+                    كل اللي محتاجه قريب منك
+                </h2>
+
+                <p>
+                    اختر القسم الذي تبحث عنه للوصول للخدمات بسهولة.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <!-- ========================= -->
+                <!-- Doctors -->
+                <!-- ========================= -->
+
+                <a
+                    href="doctors.html"
+                    class="service-link"
+                >
+
+                    <div
+                        class="service-card"
+                        data-search="دكتور أطباء عيادة"
+                    >
+
+                        <div class="service-icon doctor">
+
+                            <i class="fa-solid fa-user-doctor"></i>
+
+                        </div>
+
+                        <h3>
+                            الأطباء والعيادات
+                        </h3>
+
+                        <p>
+                            تعرف على الأطباء والتخصصات وأماكن العيادات.
+                        </p>
+
+                        <span class="service-btn">
+
+                            استعرض الأطباء
+
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ========================= -->
+                <!-- Pharmacies -->
+                <!-- ========================= -->
+
+                <a
+                    href="pharmacies.html"
+                    class="service-link"
+                >
+
+                    <div
+                        class="service-card"
+                        data-search="صيدلية صيدليات دواء علاج"
+                    >
+
+                        <div class="service-icon pharmacy">
+
+                            <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+                        </div>
+
+                        <h3>
+                            الصيدليات
+                        </h3>
+
+                        <p>
+                            تعرف على أماكن الصيدليات وأرقام التواصل معها.
+                        </p>
+
+                        <span class="service-btn">
+
+                            استعرض الصيدليات
+
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ========================= -->
+                <!-- Workers -->
+                <!-- ========================= -->
+
+                <a
+                    href="workers.html"
+                    class="service-link"
+                >
+
+                    <div
+                        class="service-card"
+                        data-search="صنايعية حرفيين كهربائي سباك نجار نقاش حداد"
+                    >
+
+                        <div class="service-icon worker">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        </div>
+
+                        <h3>
+                            الصنايعية والحرفيين
+                        </h3>
+
+                        <p>
+                            دليل الصنايعية والحرفيين في قرية أبوان.
+                        </p>
+
+                        <span class="service-btn">
+
+                            استعرض الصنايعية
+
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ========================= -->
+                <!-- Shops -->
+                <!-- ========================= -->
+<a href="shops.html" class="service-link">
+    <div class="service-card" data-search="محلات مطاعم كافيه خدمات">
+
+        <div class="service-icon shop">
+            <i class="fa-solid fa-store"></i>
+        </div>
+
+        <h3>المحلات والخدمات</h3>
+
+        <p>
+            اكتشف المحلات والمطاعم والخدمات المختلفة.
+        </p>
+
+        <span class="service-btn">
+            استعرض الخدمات
+            <i class="fa-solid fa-arrow-left"></i>
+        </span>
+
+    </div>
+</a>
+
+
+<a href="numbers.html" class="service-link">
+    <div class="service-card" data-search="رقم تليفون طوارئ">
+
+        <div class="service-icon phone">
+            <i class="fa-solid fa-phone-volume"></i>
+        </div>
+
+        <h3>أرقام مهمة</h3>
+
+        <p>
+            أهم أرقام التواصل والطوارئ والخدمات.
+        </p>
+
+        <span class="service-btn">
+            استعرض الأرقام
+            <i class="fa-solid fa-arrow-left"></i>
+        </span>
+
+    </div>
+</a>
+
+
+                <!-- ========================= -->
+                <!-- Laboratories -->
+                <!-- ========================= -->
+
+                <a
+                    href="laboratories.html"
+                    class="service-link"
+                >
+
+                    <div
+                        class="service-card"
+                        data-search="معمل معامل تحاليل تحليل دم"
+                    >
+
+                        <div class="service-icon laboratory">
+
+                            <i class="fa-solid fa-flask"></i>
+
+                        </div>
+
+                        <h3>
+                            معامل التحاليل
+                        </h3>
+
+                        <p>
+                            تعرف على أماكن معامل التحاليل وأرقام التواصل.
+                        </p>
+
+                        <span class="service-btn">
+
+                            استعرض المعامل
+
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- About -->
+    <!-- ========================= -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="about-card">
+
+
+                <!-- Developer Image -->
+
+                <div class="developer-image">
+
+                    <img
+                        src="./جيكا.png"
+                        alt="المهندس أحمد جمال الحيني"
+                    >
+
+                </div>
+
+
+                <!-- About Text -->
+
+                <div class="about-text">
+
+                    <span class="about-badge">
+                        عن الموقع
+                    </span>
+
+
+                    <h2>
+                        دليل إبوان <span>للخدمات</span>
+                    </h2>
+
+
+                    <p>
+
+                       دليل إبوان منصة إلكترونية تم إنشاؤها لخدمة أهالي القرية، من خلال جمع أهم الخدمات وأهل المهن في مكان واحد، لتسهيل الوصول إلى الأطباء والصيدليات والمعامل والصنايعية والمحلات والأرقام المهمة والتواصل معهم بسهولة.
+
+جاءت فكرة الموقع بهدف توفير دليل بسيط ومنظم يساعد أهالي القرية في الوصول للخدمة التي يحتاجونها دون عناء، مع إمكانية تطويره وإضافة المزيد من الخدمات مستقبلًا.
+
+تم تصميم وتطوير الموقع باستخدام HTML وCSS وJavaScript، مع الاهتمام بسهولة الاستخدام، وسرعة الوصول للمعلومات، ودعم الهاتف والكمبيوتر والوضع الداكن.
+                    </p>
+
+
+                    <div class="developer-name">
+
+                        <span>
+                            تطوير وبرمجة
+                        </span>
+
+                        <strong>
+                            المهندس أحمد جمال الحيني
+                        </strong>
+
+                    </div>
+
+
+                    <!-- WhatsApp -->
+
+                    <a
+                        href="https://wa.me/201553636091"
+                        class="whatsapp-btn"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        تواصل معي عبر واتساب
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Main JavaScript -->
+    <!-- ========================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

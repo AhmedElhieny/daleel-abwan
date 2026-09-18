@@ -1,0 +1,418 @@
+/* =========================================
+   المحلات والخدمات - قرية أبوان
+========================================= */
+
+.shops-container {
+    width: 100%;
+}
+
+.shops-section {
+    margin-bottom: 65px;
+}
+
+
+/* =========================================
+   عنوان القسم
+========================================= */
+
+.shops-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.shops-title-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+    font-size: 24px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.shops-title:hover .shops-title-icon {
+    transform: translateY(-3px) scale(1.04);
+
+    box-shadow:
+        0 10px 22px rgba(18, 97, 160, 0.12);
+}
+
+
+/* =========================================
+   ألوان الأقسام
+   متوافقة مع style.css
+========================================= */
+
+.supermarket-icon,
+.restaurant-icon,
+.cafe-icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+
+/* =========================================
+   عنوان القسم
+========================================= */
+
+.shops-title h2 {
+    margin: 0 0 4px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #0f172a;
+}
+
+.shops-title p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   شبكة المحلات
+========================================= */
+
+.shops-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(280px, 320px));
+
+    gap: 20px;
+
+    justify-content: start;
+}
+
+
+/* =========================================
+   كارت المحل
+========================================= */
+
+.shop-card {
+    width: 100%;
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(18, 97, 160, 0.25);
+
+    box-shadow:
+        0 12px 30px rgba(18, 97, 160, 0.12);
+}
+
+
+/* =========================================
+   اسم المحل
+========================================= */
+
+.shop-card h3 {
+    margin: 0 0 7px;
+
+    color: #172033;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   نوع النشاط
+========================================= */
+
+.shop-type {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   معلومات المحل
+========================================= */
+
+.shop-info {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-bottom: 10px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.shop-info i {
+    color: #1261a0;
+
+    font-size: 14px;
+
+    min-width: 15px;
+
+    margin-top: 3px;
+}
+
+.shop-info span {
+    flex: 1;
+}
+
+
+/* =========================================
+   زر الاتصال
+========================================= */
+
+.shop-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: 16px;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0ea5e9,
+            #1261a0
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.shop-call:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #1261a0,
+            #0f4c81
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(18, 97, 160, 0.22);
+}
+
+.shop-call i {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .shops-title h2 {
+    color: #f8fafc;
+}
+
+body.dark-mode .shops-title p {
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   Dark Mode - عناوين الأقسام
+========================================= */
+
+body.dark-mode .supermarket-icon,
+body.dark-mode .restaurant-icon,
+body.dark-mode .cafe-icon {
+    background: rgba(14, 165, 233, 0.10);
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   Dark Mode - الكروت
+========================================= */
+
+body.dark-mode .shop-card {
+    background: #0d1b2a;
+
+    border-color:
+        rgba(148, 163, 184, 0.12);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+body.dark-mode .shop-card:hover {
+    border-color:
+        rgba(56, 189, 248, 0.20);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================
+   Dark Mode - النصوص
+========================================= */
+
+body.dark-mode .shop-card h3 {
+    color: #f8fafc;
+}
+
+body.dark-mode .shop-type,
+body.dark-mode .shop-info {
+    color: #94a3b8;
+}
+
+body.dark-mode .shop-info i {
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   Dark Mode - زر الاتصال
+========================================= */
+
+body.dark-mode .shop-call {
+    background:
+        linear-gradient(
+            135deg,
+            #0ea5e9,
+            #1261a0
+        );
+}
+
+body.dark-mode .shop-call:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #1261a0,
+            #0f4c81
+        );
+}
+
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width: 900px) {
+
+    .shops-grid {
+        grid-template-columns:
+            repeat(auto-fill, minmax(260px, 320px));
+    }
+
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 600px) {
+
+    .shops-section {
+        margin-bottom: 45px;
+    }
+
+    .shops-title {
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .shops-title-icon {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+
+        font-size: 21px;
+    }
+
+    .shops-title h2 {
+        font-size: 20px;
+    }
+
+    .shops-title p {
+        font-size: 11px;
+    }
+
+    .shops-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .shop-card {
+        padding: 17px;
+    }
+
+    .shop-card h3 {
+        font-size: 17px;
+    }
+
+    .shop-type {
+        font-size: 11px;
+    }
+
+    .shop-info {
+        font-size: 11px;
+    }
+
+}
