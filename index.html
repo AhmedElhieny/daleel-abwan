@@ -90,7 +90,24 @@
 
     </script>
 
+<script>
+document.addEventListener("click", function (e) {
 
+    const link = e.target.closest('a[href^="tel:"]');
+
+    if (!link) return;
+
+    const phone = link.getAttribute("href");
+
+    if (!phone || phone === "tel:") return;
+
+    e.preventDefault();
+
+    // محاولة فتح تطبيق الاتصال
+    window.location.href = phone;
+
+});
+</script>
     <!-- ========================= -->
     <!-- Header -->
     <!-- ========================= -->
