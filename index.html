@@ -93,18 +93,24 @@
 <script>
 document.addEventListener("click", function (e) {
 
-    const link = e.target.closest('a[href^="tel:"]');
+    const button = e.target.closest('a[href^="tel:"]');
 
-    if (!link) return;
+    if (!button) return;
 
-    const phone = link.getAttribute("href");
+    const phone = button.getAttribute("href");
 
     if (!phone || phone === "tel:") return;
 
-    e.preventDefault();
+    const callLink = document.createElement("a");
+    callLink.href = phone;
+    callLink.style.display = "none";
 
-    // محاولة فتح تطبيق الاتصال
-    window.location.href = phone;
+    document.body.appendChild(callLink);
+    callLink.click();
+
+    setTimeout(function () {
+        callLink.remove();
+    }, 1000);
 
 });
 </script>
